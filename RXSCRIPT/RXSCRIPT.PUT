@@ -1,0 +1,69 @@
+###############################################################################
+#                                                                             #
+#   MODULE         RxScript.Put                                               #
+#                                                                             #
+#   DESCRIPTION    File upload definition file which specifies the            #
+#                  files that are to be uploaded by the RxScript              #
+#                  process.                                                   #
+#                                                                             #
+#   COPYRIGHT           Copyright (C) 1993 - Crucial Applications             #
+#                                 All rights reserved                         #
+#                                                                             #
+#                             Ian Timms - 20th March 1993                     #
+#                                                                             #
+#   NOTES          All lines begining with '#' are treated as comments.       #
+#                                                                             #
+#                  This file contains the specifications of files which       #
+#                  are to be uploaded. The format required is:                #
+#                                                                             #
+#                  BBS prefix  Area  Name                  Description        #
+#                  ----------  ----  --------------------  ---------------    #
+#                  BUNYIP      1     FRED.ZIP              A nice package     #
+#                  BUNYIP      2     D:\NEWFILES\DAVE.ZIP  This is another    #
+#                  *           ANY   MOBY.LZH              The whale          #
+#                                                                             #
+#                  Entry 1 - source directory defaults to OutBox              #
+#                  Entry 2 - uploads from designated directory                #
+#                  Entry 3 - asterisk uploads to any bbs                      #
+#                                                                             #
+#                  A limit on the number of files sent at any one time        #
+#                  is specified in the .BBS definition file.                  #
+#                                                                             #
+#                  Once sent successfully the file specification will be      #
+#                  commented out along with having the text "Uploaded on      #
+#                  date at time:  " prepended.                                #
+#                                                                             #
+#                  Use of the asterisk (any BBS) parameter requires that      #
+#                  you have a global upload capability or are in the          #
+#                  required area when the upload function is invoked.         #
+#                  In this case the area parameter is ignored.                #
+#                                                                             #
+#                  When the BBS prefix is specified as an asterisk the        #
+#                  program will continue to attempt to upload the file        #
+#                  until such time as you comment it out manually.  In        #
+#                  order to keep track of where you have uploaded the         #
+#                  file, a copy of the line with the BBS prefix to which      #
+#                  it was uploaded will be generated.                         #
+#                                                                             #
+#                  Note:  The area switching capability has not yet been      #
+#                  implemented, please ensure that you have the ability       #
+#                  to do a global upload from any area or that you are        #
+#                  always in an area which permits global upload when         #
+#                  the upload function is invoked.                            #
+#                                                                             #
+#                  If there is no other reference to the file in this         #
+#                  list then it will be deleted, but only if it was in        #
+#                  the OutBox, not otherwise.  This will permit release       #
+#                  of diskspace once files have been uploaded.  This is       #
+#                  also under development.                                    #
+#                                                                             #
+#   HISTORY                                                                   #
+#                                                                             #
+#     10-Jun-1993  Original release.                                          #
+#                                                                             #
+###############################################################################
+#
+# Uploaded: BUNYIP V RXASYNC.ZIP DLL of Comms functions for REXX use. (it930814)
+* V RXASYNC.ZIP DLL of Comms functions for REXX use. (it931118)
+#
+

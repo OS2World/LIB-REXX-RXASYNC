@@ -1,0 +1,23 @@
+
+Archive Name: RXASYNC.zip
+
+Program Description:
+
+RXASYNC.dll    Version 2.0     26th Dec 1994
+
+A REXX DLL which provides FULL exposure of the OS/2 ASYNC
+communications API and thus enables REXX users to fully exploit
+the scripting advantages of REXX and OS/2 serial communications.
+Some higher level routines are also included in order to simplify
+the script implementation. Works with SIO and standard COM drivers.
+Source is included and support is available by email.
+
+Operating System: OS/2 2.x
+
+Program Source: Uploaded by author.
+
+Your name: Ian Timms
+Your email address: itimms@ariel.unimelb.edu.au
+
+Proposed directory for placement: pub/os2/32bit/comm
+

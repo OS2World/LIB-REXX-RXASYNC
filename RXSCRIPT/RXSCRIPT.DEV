@@ -1,0 +1,97 @@
+###############################################################################
+#                                                                             #
+#   MODULE         RxScript.Dev                                               #
+#                                                                             #
+#   DESCRIPTION    Default communications device definition file which        #
+#                  specifies values that are normally written to, or          #
+#                  expected to be read from the device.                       #
+#                                                                             #
+#   COPYRIGHT           Copyright (C) 1993 - Crucial Applications             #
+#                                 All rights reserved                         #
+#                                                                             #
+#                             Ian Timms - 20th March 1993                     #
+#                                                                             #
+#   NOTES          All lines begining with '#' are treated as comments.       #
+#                                                                             #
+#                  This file contains the definitions of strings for          #
+#                  various device settings. These items are loaded when       #
+#                  the RxScript program is started. All settings are          #
+#                  optional with defaults being provided by the RxScript      #
+#                  program where necessary.                                   #
+#                                                                             #
+#                  If the setting "tag" is specified without a value          #
+#                  then the variable related to that "tag" is set to an       #
+#                  empty string (ie.  null).  If neither the "tag" nor a      #
+#                  value is specified then the default value is assumed.      #
+#                                                                             #
+#                  The following are currently recognised:-                   #
+#                                                                             #
+#                      Tag                     Default                        #
+#                      ------------------      ---------------------------    #
+#                      Port:                   COM2                           #
+#                      PollTimeout:            2000                           #
+#                      BaudRate:               1200                           #
+#                      Parity:                 N                              #
+#                      DataBits:               8                              #
+#                      StopBits:               1                              #
+#                      WriteTimeout:           50                             #
+#                      ReadTimeout:            50                             #
+#                      DcbFlags1:              00001001                       #
+#                      DcbFlags2:              10100000                       #
+#                      DcbFlags3:              11010010                       #
+#                      ErrorChar:              00                             #
+#                      BreakChar:              00                             #
+#                      XonChar:                11                             #
+#                      XoffChar:               13                             #
+#                      EnhancedParms:          00000010                       #
+#                      ------------------      ---------------------------    #
+#                                                                             #
+#                  The caret (^) followed by any one letter is replaced       #
+#                  by the control sequence for that character.  Use two       #
+#                  carets if you actually need to pass a ^M style             #
+#                  sequence (eg.  ^^M).  A caret may be followed only         #
+#                  by a letter, another caret, or ([) for escape,             #
+#                  anything else is an error.                                 #
+#                                                                             #
+#   HISTORY                                                                   #
+#                                                                             #
+#     10-Jun-1993  Original release.                                          #
+#                                                                             #
+###############################################################################
+#
+#                                      Port      COM1/COM2/COM3/COM4/pipename
+Port:           COM4
+#                                      Read polling timeout
+PollTimeout:    2000
+#                                      Baudrate  38400/19200/9600/4800 etc
+BaudRate:       19200
+#                                      Parity    N/O/E/M/S
+Parity:         N
+#                                      Databits  8/7/6/5
+DataBits:       8
+#                                      Stopbits  1/1.5/2
+StopBits:       1
+#                                      DCB write timeout in hundredths
+WriteTimeout:   50
+#                                      DCB read timeout in hundredths
+ReadTimeout:    50
+#                                      DCB flags entry 1
+DcbFlags1:      00001001
+#                                      DCB flags entry 2
+DcbFlags2:      10100000
+#                                      DCB flags entry 3
+DcbFlags3:      11010010
+#                                      DCB error replace character
+ErrorChar:      00
+#                                      DCB break replace character
+BreakChar:      00
+#                                      DCB XON character
+XonChar:        11
+#                                      DCB XOFF character
+XoffChar:       13
+#                                      Enhanced mode parameters
+EnhancedParms:  00000010
+#
+# End of communications device definition file.
+#
+

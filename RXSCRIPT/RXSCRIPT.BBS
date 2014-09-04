@@ -1,0 +1,96 @@
+###############################################################################
+#                                                                             #
+#   MODULE         RxScript.Bbs                                               #
+#                                                                             #
+#   DESCRIPTION    Default Bulletin Board Service definition file which       #
+#                  specifies values that are normally written to, or          #
+#                  expected to be read from the service.                      #
+#                                                                             #
+#   COPYRIGHT           Copyright (C) 1993 - Crucial Applications             #
+#                                 All rights reserved                         #
+#                                                                             #
+#                             Ian Timms - 20th March 1993                     #
+#                                                                             #
+#   NOTES          All lines begining with '#' are treated as comments.       #
+#                                                                             #
+#                  This file contains the definitions of strings for          #
+#                  various BBS settings. These items are loaded when          #
+#                  the RxScript program is started. Most settings are         #
+#                  optional with defaults being provided by the RxScript      #
+#                  program where necessary.                                   #
+#                                                                             #
+#                  If the setting "tag" is specified without a value          #
+#                  then the variable related to that "tag" is set to an       #
+#                  empty string (ie.  null).  If neither the "tag" nor a      #
+#                  value is specified then the default value is assumed.      #
+#                                                                             #
+#                  The following are currently recognised:-                   #
+#                                                                             #
+#                      Tag                     Default                        #
+#                      ------------------      ---------------------------    #
+#                      Name:                                                  #
+#                      Prefix:                                                #
+#                      Sysop:                                                 #
+#                      PhoneNumber:                                           #
+#                      HostNetId:                                             #
+#                      Script:                                                #
+#                      Userid:                                                #
+#                      Password:                                              #
+#                      BaudRate:               see RxScript.Dev               #
+#                      Parity:                 see RxScript.Dev               #
+#                      DataBits:               see RxScript.Dev               #
+#                      StopBits:               see RxScript.Dev               #
+#                      OnlineTimeout:          600                            #
+#                      RetryWait:              60                             #
+#                      RetryLimit:             5                              #
+#                      DefFileArea:            1                              #
+#                      ShowFtpStatus:          Yes                            #
+#                      MaxUpload:              1                              #
+#                      MaxDownload:            2                              #
+#                      ReplyCheck:                                            #
+#                      ------------------      ---------------------------    #
+#                                                                             #
+#                  The caret (^) followed by any one letter is replaced       #
+#                  by the control sequence for that character.  Use two       #
+#                  carets if you actually need to pass a ^M style             #
+#                  sequence (eg.  ^^M).  A caret may be followed only         #
+#                  by a letter, another caret, or ([) for escape,             #
+#                  anything else is an error.                                 #
+#                                                                             #
+#   HISTORY                                                                   #
+#                                                                             #
+#     10-Jun-1993  Original release.                                          #
+#                                                                             #
+###############################################################################
+#
+Name:           Bunyips Cave BBS
+Prefix:         BUNYIP
+Sysop:          Brenda Moon
+PhoneNumber:    859-8194
+HostNetId:      3:633/379
+#
+Script:         BunMail
+Userid:         Ian Timms
+Password:       my_password_goes_here
+#
+BaudRate:       19200
+Parity:         N
+DataBits:       8
+StopBits:       1
+#                                      Online timeout 600 = 10 minutes
+OnlineTimeout:  600
+#                                      Retry wait 60 = 1 minutes
+RetryWait:      60
+#                                      Retry limit 5 times
+RetryLimit:     5
+#
+#                                      File area to use as default (usually providing global D/L)
+DefFileArea:    V
+ShowFtpStatus:  Yes
+MaxUpload:      1
+MaxDownload:    2
+#                                      File to test for to see if replies can be uploaded
+ReplyCheck:     E:\PROGRAMS\OS2\MR2\TMP$$\CONTROL.DAT
+#
+# End of Bulletin Board Service definition file.
+#

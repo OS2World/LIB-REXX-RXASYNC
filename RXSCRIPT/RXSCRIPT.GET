@@ -1,0 +1,78 @@
+###############################################################################
+#                                                                             #
+#   MODULE         RxScript.Get                                               #
+#                                                                             #
+#   DESCRIPTION    File download definition file which specifies the          #
+#                  files that are to be downloaded by the RxScript            #
+#                  process.                                                   #
+#                                                                             #
+#   COPYRIGHT           Copyright (C) 1993 - Crucial Applications             #
+#                                 All rights reserved                         #
+#                                                                             #
+#                             Ian Timms - 20th March 1993                     #
+#                                                                             #
+#   NOTES          All lines begining with '#' are treated as comments.       #
+#                                                                             #
+#                  This file contains the specifications of files which       #
+#                  are to be downloaded. The format required is:              #
+#                                                                             #
+#                  BBS prefix  Area    Name        Destination                #
+#                  ----------  ------  ----------  ---------------------      #
+#                  BUNYIP      1       TICH.ZIP    C:\NEWGAMES\               #
+#                  BUNYIP      2       DAVE.LZH    D:\MOREDOCS\DAVE002.LZH    #
+#                  BUNYIP      OS2     PETE.LZH                               #
+#                  *           PUBLIC  MOBY.LZH                               #
+#                  BUNYIP      *       DICK.LZH                               #
+#                                                                             #
+#                                                                             #
+#                  Entry 1 - uses same name (slash reqd)                      #
+#                  Entry 2 - ie. renames                                      #
+#                  Entry 3 - blank defaults to InBox with same name           #
+#                  Entry 4 - asterisk downloads from any bbs                  #
+#                  Entry 5 - asterisk downloads from any area                 #
+#                                                                             #
+#                  Once downloaded successfully the file specification        #
+#                  is commented out along with having the text                #
+#                  "Downloaded on date at time:  " prepended.                 #
+#                                                                             #
+#                  A limit on the number of files downloaded at any one       #
+#                  time is specified in the .BBS definition file.             #
+#                                                                             #
+#                  Use of an asterisk for the BBS parameter requires          #
+#                  that you have a global download capability or are in       #
+#                  the required area when the download function is            #
+#                  invoked.  In this case the Area parameter is ignored.      #
+#                  Also in this case the download specification is not        #
+#                  commented out once a file has been downloaded unless       #
+#                  a destination is specified and that target file            #
+#                  already exists.                                            #
+#                                                                             #
+#                  Use of an asterisk for the Area parameter requires         #
+#                  that you have a global download capability or are in       #
+#                  the required area when the download function is            #
+#                  invoked.                                                   #
+#                                                                             #
+#                  Note:  The area switching capability has not yet been      #
+#                  implemented, please ensure that you have the ability       #
+#                  to do a global download from any area or that you are      #
+#                  always in an area which permits global download when       #
+#                  the download function is invoked.  Thus currently an       #
+#                  asterisk is implied for the Area parameter.                #
+#                                                                             #
+#                  The destination facility is not fully functional as it     #
+#                  is currently under development.  At present the ability    #
+#                  to specify the target directory works, and the target      #
+#                  filename only works for X and Ymodem, not Zmodem.          #
+#                                                                             #
+#   HISTORY                                                                   #
+#                                                                             #
+#     10-Jun-1993  Original release.                                          #
+#                                                                             #
+###############################################################################
+#
+# Downloaded on  9 Mar 1994 at 11:11pm: BUNYIP V NEWFILES.ZIP
+BUNYIP V TEAMOS2.ZIP
+BUNYIP * BBSFILES.ZIP C:\LISTS\BUNFILES.ZIP
+*      * NEWFILES.ZIP
+#
+

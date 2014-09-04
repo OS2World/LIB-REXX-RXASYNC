@@ -1,0 +1,25 @@
+#
+# BUNYIP.BBS
+#
+Name:           Bunyips Cave BBS
+Prefix:         BUNYIP
+Sysop:          Brenda Moon
+PhoneNumber:    859-8194
+HostNetId:      3:633/379
+#
+Script:         BunMail
+Userid:         Ian Timms
+Password:       my_password_goes_here
+#
+OnlineTimeout:  2400
+RetryWait:      60
+RetryLimit:     5
+#
+ShowFtpStatus:  Yes
+MaxUpload:      5
+MaxDownload:    3
+#
+ReplyCheck:     E:\PROGRAMS\OS2\MR2\TMP$$\CONTROL.DAT
+#
+# End.
+#

@@ -1,0 +1,55 @@
+LIBRARY RXASYNC INITINSTANCE LONGNAMES
+PROTMODE
+DESCRIPTION 'RXASYNC Utilities - (C) Copyright Crucial Applications 1994'
+DATA MULTIPLE NONSHARED
+STACKSIZE 32768
+EXPORTS
+     RXASYNCDROPFUNCS       = RxAsyncDropFuncs       @1
+     RXASYNCLOADFUNCS       = RxAsyncLoadFuncs       @2
+     RXASYNCPRIORITY        = RxAsyncPriority        @3
+     RXASYNCSLEEP           = RxAsyncSleep           @4
+     RXASYNCGETDCBINFO      = RxAsyncGetDcbInfo      @5
+     RXASYNCSETDCBINFO      = RxAsyncSetDcbInfo      @6
+     RXASYNCGETENHPARM      = RxAsyncGetEnhParm      @7
+     RXASYNCSETENHPARM      = RxAsyncSetEnhParm      @8
+     RXASYNCGETLNCTRL       = RxAsyncGetLnCtrl       @9
+     RXASYNCSETLNCTRL       = RxAsyncSetLnCtrl       @10
+     RXASYNCSETBREAKOFF     = RxAsyncSetBreakOff     @11
+     RXASYNCSETBREAKON      = RxAsyncSetBreakOn      @12
+     RXASYNCTXIMMEDIATE     = RxAsyncTxImmediate     @13
+     RXASYNCTXSTOP          = RxAsyncTxStop          @14
+     RXASYNCTXSTART         = RxAsyncTxStart         @15
+     RXASYNCGETCOMSTATUS    = RxAsyncGetComStatus    @16
+     RXASYNCGETTXSTATUS     = RxAsyncGetTxStatus     @17
+     RXASYNCGETMDMOUTPUT    = RxAsyncGetMdmOutput    @18
+     RXASYNCSETMDMOUTPUT    = RxAsyncSetMdmOutput    @19
+     RXASYNCGETMDMINPUT     = RxAsyncGetMdmInput     @20
+     RXASYNCGETRXCOUNT      = RxAsyncGetRxCount      @21
+     RXASYNCGETTXCOUNT      = RxAsyncGetTxCount      @22
+     RXASYNCGETCOMERROR     = RxAsyncGetComError     @23
+     RXASYNCGETCOMEVENT     = RxAsyncGetComEvent     @24
+     RXASYNCOPEN            = RxAsyncOpen            @25
+     RXASYNCCLOSE           = RxAsyncClose           @26
+     RXASYNCWAIT            = RxAsyncWait            @27
+     RXASYNCREAD            = RxAsyncRead            @28
+     RXASYNCWRITE           = RxAsyncWrite           @29
+     RXASYNCPRINT           = RxAsyncPrint           @30
+     RXASYNCCARRIER         = RxAsyncCarrier         @31
+     RXASYNCBREAK           = RxAsyncBreak           @32
+     RXASYNCDCBINFO         = RxAsyncDcbInfo         @33
+     RXASYNCFILEEXISTS      = RxAsyncFileExists      @34
+     RXASYNCFILEDELETE      = RxAsyncFileDelete      @35
+     RXASYNCFILECOPY        = RxAsyncFileCopy        @36
+     RXASYNCFILEMOVE        = RxAsyncFileMove        @37
+     RXASYNCFILERENAME      = RxAsyncFileRename      @38
+     RXASYNCFILENAMEIS      = RxAsyncFileNameIs      @39
+     RXASYNCFILEPATHIS      = RxAsyncFilePathIs      @40
+     RXASYNCDIRECTORY       = RxAsyncDirectory       @41
+     RXASYNCMSGBOX          = RxAsyncMsgBox          @42
+     RXASYNCWATCH           = RxAsyncWatch           @43
+     RXASYNCFLUSHINPUT      = RxAsyncFlushInput      @44
+     RXASYNCFLUSHOUTPUT     = RxAsyncFlushOutput     @45
+     RXASYNCACTIVE          = RxAsyncActive          @46
+     RXASYNCRAISE           = RxAsyncRaise           @47
+     RXASYNCLOWER           = RxAsyncLower           @48
+

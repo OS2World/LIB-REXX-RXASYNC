@@ -1,0 +1,129 @@
+###############################################################################
+#                                                                             #
+#   MODULE         RxScript.Mdm                                               #
+#                                                                             #
+#   DESCRIPTION    Default modem definition file which specifies values       #
+#                  that are normally written to, or expected to be read       #
+#                  from the modem.                                            #
+#                                                                             #
+#   COPYRIGHT           Copyright (C) 1993 - Crucial Applications             #
+#                                 All rights reserved                         #
+#                                                                             #
+#                             Ian Timms - 20th March 1993                     #
+#                                                                             #
+#   NOTES          All lines begining with '#' are treated as comments.       #
+#                                                                             #
+#                  This file contains the definitions of strings for          #
+#                  various modem settings. These items are loaded when        #
+#                  the RxScript program is started. All settings are          #
+#                  optional with defaults being provided by the RxScript      #
+#                  program where necessary.                                   #
+#                                                                             #
+#                  If the setting "tag" is specified without a value          #
+#                  then the variable related to that "tag" is set to an       #
+#                  empty string (ie.  null).  If neither the "tag" nor a      #
+#                  value is specified then the default value is assumed.      #
+#                                                                             #
+#                  The following are currently recognised:-                   #
+#                                                                             #
+#                      Tag                     Default                        #
+#                      ------------------      ---------------------------    #
+#                      Name:                   Generic                        #
+#                      ConnectTimeout:         45                             #
+#                      AutoDnLoad:             ^XB00                          #
+#                      AutoUpLoad:             ^XB01                          #
+#                      Enter:                  ^M                             #
+#                      Reset:                  ATZ                            #
+#                      Break:                  +++~~~+++                      #
+#                      DialPrefix:             ATDT                           #
+#                      DialSuffix:             ^M                             #
+#                      Online:                 ATO                            #
+#                      Hangup:                 ATH0                           #
+#                      Okay:                   OK                             #
+#                      Error:                  ERROR                          #
+#                      NoCarrier:              NO CARRIER                     #
+#                      InitStr0:               ATE0Q0V1X1&C1&D2               #
+#                      InitStr1:                                              #
+#                      InitStr2:                                              #
+#                      InitStr3:                                              #
+#                      InitStr4:                                              #
+#                      InitStr5:                                              #
+#                      InitStr6:                                              #
+#                      InitStr7:                                              #
+#                      InitStr8:                                              #
+#                      InitStr9:                                              #
+#                      Connect0:               CONNECT                        #
+#                      Connect1:                                              #
+#                      Connect2:                                              #
+#                      Connect3:                                              #
+#                      Connect4:                                              #
+#                      Connect5:                                              #
+#                      Connect6:                                              #
+#                      Connect7:                                              #
+#                      Connect8:                                              #
+#                      Connect9:                                              #
+#                      NoConnect0:             NO CARRIER                     #
+#                      NoConnect3:                                            #
+#                      NoConnect1:                                            #
+#                      NoConnect2:                                            #
+#                      NoConnect4:                                            #
+#                      NoConnect5:                                            #
+#                      NoConnect6:                                            #
+#                      NoConnect7:                                            #
+#                      NoConnect8:                                            #
+#                      NoConnect9:                                            #
+#                      ------------------      ---------------------------    #
+#                                                                             #
+#                  The caret (^) followed by any one letter is replaced       #
+#                  by the control sequence for that character.  Use two       #
+#                  carets if you actually need to pass a ^M style             #
+#                  sequence (eg.  ^^M).  A caret may be followed only         #
+#                  by a letter, another caret, or ([) for escape,             #
+#                  anything else is an error.                                 #
+#                                                                             #
+#   HISTORY                                                                   #
+#                                                                             #
+#     10-Jun-1993  Original release.                                          #
+#                                                                             #
+###############################################################################
+#
+Name:           Generic
+#                                      Connect timeout in seconds
+ConnectTimeout: 30
+#
+AutoDnLoad:     ^XB00
+AutoUpLoad:     ^XB01
+#
+Enter:          ^M
+Reset:          ATZ
+Break:          +++~~~+++
+DialPrefix:     ATDT
+DialSuffix:     ^M
+Online:         ATO
+Hangup:         ATH0
+#
+Okay:           OK
+Error:          ERROR
+NoCarrier:      NO CARRIER
+#
+#                                      Initialisation strings
+InitStr0:       ATT
+InitStr1:       ATS0=0
+InitStr2:       ATB0E0F1L0M1Q0V1X6Y0
+InitStr3:       AT&B0&C1&D2&G0&P1&Q1&R1&S1$E1$F3$S8
+InitStr4:       AT&W0
+InitStr5:       AT&W1
+#
+#                                      Connect strings
+Connect0:       CONNECT 9600 RELIABLE
+#
+#                                      Connect fail strings
+NoConnect0:     NO CARRIER
+NoConnect1:     NO ANSWER
+NoConnect2:     NO DIALTONE
+NoConnect3:     RING
+NoConnect4:     BUSY
+#
+# End of modem definition file.
+#
+

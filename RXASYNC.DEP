@@ -1,0 +1,72 @@
+# IBM Developer's Workframe/2 Make File Creation run at 14:45:08 on 12/26/94
+
+# Make File Creation run in directory:
+#   D:\USR\OS2\RXASYNC;
+
+# Assumed INCLUDE environment variable path:
+#   C:\TOOLKT21\CPLUS\OS2H;
+#   C:\TOOLKT21\C\OS2H;
+#   C:\TOOLKT21\C\OS2H\VDD;
+#   C:\TOOLKT21\ASM\OS2INC;
+#   C:\IBMCPP\INCLUDE;
+#   C:\IBMCPP\IBMCLASS;
+#   D:\USR\OS2\RXASYNC;
+#   E:\GUIDE\SYS;
+
+
+INCLUDE001=.
+INCLUDE001=$(INCLUDE001);$(INCLUDE)
+
+INCLUDE000=$(INCLUDE)
+
+
+COMSFUNC.OBJ:  COMSFUNC.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}memory.h  \
+   {$(INCLUDE001)}miscfunc.h  \
+   {$(INCLUDE001)}comsfunc.h  \
+   RXASYNC.MAK
+
+FILEFUNC.OBJ:  FILEFUNC.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+   {$(INCLUDE001)}miscfunc.h  \
+   {$(INCLUDE001)}filefunc.h  \
+   RXASYNC.MAK
+
+MISCFUNC.OBJ:  MISCFUNC.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}time.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+   {$(INCLUDE001)}miscfunc.h  \
+   RXASYNC.MAK
+
+RXASYNC.OBJ:  RXASYNC.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+   {$(INCLUDE001)}miscfunc.h  \
+   {$(INCLUDE001)}rxvpfunc.h  \
+   {$(INCLUDE001)}filefunc.h  \
+   {$(INCLUDE001)}comsfunc.h  \
+   {$(INCLUDE001)}rxasync.h  \
+   RXASYNC.MAK
+
+RXVPFUNC.OBJ:  RXVPFUNC.C  \
+#  {$(INCLUDE000)}os2.h  \
+#  {$(INCLUDE000)}stdio.h  \
+#  {$(INCLUDE000)}string.h  \
+#  {$(INCLUDE000)}stdlib.h  \
+#  {$(INCLUDE000)}rexxsaa.h  \
+   {$(INCLUDE001)}miscfunc.h  \
+   {$(INCLUDE001)}rxvpfunc.h  \
+   RXASYNC.MAK

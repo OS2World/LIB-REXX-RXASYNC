@@ -1,0 +1,9 @@
+RXASYNC - Version 2.0, 26th Dec 1994
+A REXX DLL which provides FULL exposure
+of the OS/2 ASYNC communications API and
+thus enables REXX users to fully exploit
+the scripting advantages of REXX and
+OS/2 serial communications.  Works with
+SIO and standard COM drivers.  Source is
+included and support available by email.
+
